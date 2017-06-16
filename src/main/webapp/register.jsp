@@ -15,9 +15,10 @@
 <hr>
 <form action="user" method="post">
     <input type="hidden" name="action" value="register">
-    <input type="text" name="username" placeholder="用户名">
-    <input type="password" name="password" placeholder="密码">
-    <input type="submit" value="保存">
+    <input type="text" name="username" placeholder="用户名"><br>
+    <input type="password" name="password" placeholder="密码"><br>
+    <input type="submit" value="注册">
 </form>
+${requestScope.message}
 </body>
 </html>
