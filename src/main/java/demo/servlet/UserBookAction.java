@@ -53,7 +53,7 @@ public class UserBookAction extends HttpServlet {
         resp.sendRedirect("index.jsp");
     }
 
-    private boolean canBorrow(int bookId, HttpServletRequest req, HttpServletResponse resp) {
+    private boolean canBorrow(int bookId, HttpServletRequest req, HttpServletResponse resp)throws ServletException,IOException {
         Connection connection = Db.getConnection();
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
@@ -81,7 +81,7 @@ public class UserBookAction extends HttpServlet {
         return false;
     }
 
-    private void borrowBook(HttpServletRequest req, HttpServletResponse resp, int userId, int bookId) throws IOException {
+    private void borrowBook(HttpServletRequest req, HttpServletResponse resp, int userId, int bookId) throws ServletException, IOException {
         Connection connection = Db.getConnection();
         PreparedStatement preparedStatement = null;
 
@@ -117,7 +117,7 @@ public class UserBookAction extends HttpServlet {
         }
     }
 
-    private void returnBook(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    private void returnBook(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         int userBookId = Integer.parseInt(req.getParameter("userBookId"));
         int bookId = Integer.parseInt(req.getParameter("bookId"));
 

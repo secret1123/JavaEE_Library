@@ -11,7 +11,7 @@ import java.io.IOException;
  * JavaEE_Library
  */
 public class Error {
-    public static void showError(HttpServletRequest req, HttpServletResponse resp)throws ServletException,IOException{
+    public static void showError(HttpServletRequest req, HttpServletResponse resp)throws IOException{
         req.setAttribute("message","Error");
         resp.sendRedirect("default.jsp");
     }

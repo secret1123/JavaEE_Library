@@ -34,7 +34,7 @@ ${sessionScope.username}
     <input type="text" name="amount" placeholder="数量"><br>
     <input type="submit" value="添加">
 </form>
-<br>
+<hr>
 <table>
     <tr>
         <th>序号</th>
