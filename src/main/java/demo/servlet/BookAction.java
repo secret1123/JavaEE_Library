@@ -141,7 +141,7 @@ public class BookAction extends HttpServlet {
         Connection connection = Db.getConnection();
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
-        String sql = "";
+        String sql = "SELECT * FROM javaee_library.book WHERE id = ?";
 
         try {
             if (connection != null) {
